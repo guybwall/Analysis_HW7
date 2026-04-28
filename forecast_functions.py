@@ -120,7 +120,7 @@ def compute_metrics(observed_cfs, predicted_cfs):
 
 
 def plot_validation(train_cfs, test_cfs, forecast_cfs, metrics, model_label,
-                    train_forecast_cfs=None, save_path='validation_plot.png'):
+                    train_forecast_cfs=None, save_path='Outputs/validation_plot.png'):
     fig, axes = plt.subplots(2, 1, figsize=(12, 9))
 
     axes[0].plot(train_cfs.index, train_cfs.values,
