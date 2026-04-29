@@ -28,6 +28,8 @@ The scripts use the following third-party packages:
 
 You also need valid HydroFrame credentials because the scripts call the HydroFrame API to download streamflow data.
 
+See Environment.yml file.
+
 ## Quick Start
 
 1. Make sure the workflow script is executable:
