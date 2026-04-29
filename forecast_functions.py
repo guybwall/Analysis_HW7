@@ -102,6 +102,15 @@ def make_5day_forecast_monthly(monthly_means, forecast_date, n_days=5):
     month_means = [monthly_means.get(date.month, np.nan) for date in dates]
     return pd.DataFrame({'Forecast_cfs': month_means}, index=dates)
 
+def make_5day_forecast_randomized(monthly_means, forecast_date, n_days=5):
+    """Return DataFrame with randomized forecasts based on monthly means."""
+    forecast_ts = pd.Timestamp(forecast_date)
+    dates = pd.date_range(start=forecast_ts, periods=n_days, freq='D')
+    month_means = [monthly_means.get(date.month, np.nan) for date in dates]
+    # Add random noise (e.g., 20% of the monthly mean) to create variability
+    randomized = [max(0, mean * (1 + np.random.uniform(-0.2, 0.2))) for mean in month_means]
+    return pd.DataFrame({'Forecast_cfs': randomized}, index=dates)
+
 
 def make_5day_forecast_longterm(mean_flow, forecast_date, n_days=5):
     """Return DataFrame with the long-term mean flow for every forecast day."""
