@@ -1,0 +1,12 @@
+name: analysis_hw7
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - pandas
+  - matplotlib
+  - pip:
+      - hf_hydrodata
