@@ -17,7 +17,7 @@ TRAIN_END="2022-12-31"
 TEST_START="2023-01-01"
 TEST_END="2024-12-31"
 
-FORECAST_DATE="2024-04-30"   # First day of the 5-day forecast (YYYY-MM-DD)
+FORECAST_DATE="2024-05-01"   # First day of the 5-day forecast (YYYY-MM-DD)
 REFIT_MODEL="True"           # True = re-fit from scratch | False = use saved_model.pkl
 RUN_VALIDATION="True"        # True = show validation plots and metrics
 MODEL="randomized"         # monthly_avg + random noise (more variability than just monthly means)
